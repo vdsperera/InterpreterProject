@@ -24,5 +24,15 @@ public class Scanner
 
     public Scanner(String source) {
         this.source = source;
+    }
+
+    List<Token> scanTokens()
+    {
+        while(!isAtEnd()) {
+            start = current;
+            scanToken();
+        }
+        tokens.add(new Token(TokenType.EOF, "", null, line));
+        return tokens;
     }    
 }
