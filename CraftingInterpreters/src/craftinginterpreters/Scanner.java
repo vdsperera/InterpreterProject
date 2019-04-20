@@ -56,5 +56,11 @@ public class Scanner
             case ';': addToken(TokenType.SEMICOLON);
             case '*': addToken(TokenType.STAR);
         }
+    }
+
+    private char advance()
+    {
+        current++;
+        return source.charAt(current - 1);
     }    
 }
