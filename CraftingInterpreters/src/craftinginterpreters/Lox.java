@@ -21,6 +21,7 @@ import craftinginterpreters.Scanner;
  */
 public class Lox {
 
+    static boolean hadError = false;    
     /**
      * @param args the command line arguments
      */
