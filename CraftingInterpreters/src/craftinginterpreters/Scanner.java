@@ -34,5 +34,10 @@ public class Scanner
         }
         tokens.add(new Token(TokenType.EOF, "", null, line));
         return tokens;
+    }
+
+    private boolean isAtEnd()
+    {
+        return current >= source.length();
     }    
 }
