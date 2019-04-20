@@ -62,5 +62,10 @@ public class Scanner
     {
         current++;
         return source.charAt(current - 1);
+    }
+
+    private void addToken(TokenType type)
+    {
+        addToken(type, null);
     }    
 }
