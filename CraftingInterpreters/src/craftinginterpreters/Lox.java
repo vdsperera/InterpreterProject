@@ -32,5 +32,16 @@ public class Lox {
     {
         byte[] bytes = Files.readAllBytes(Paths.get(path));
         run(new String(bytes, Charset.defaultCharset()));
+    }
+
+    private static void runPrompt() throws IOException
+    {
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(input);
+        
+        for(;;) {
+            System.out.print("> ");
+            run(reader.readLine());
+        }
     }    
 }
